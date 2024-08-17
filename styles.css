@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --color-primary: #0A3871;
+  --color-secondary: #495057;
+  --color-hover: #0C4B9B;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .logo-alura{
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.logo-alura:hover{
+    transform: translateY(15px);
+}
+
+  .app {
+    width: 100%;
+    min-height: 100vh;
+    background: #f3f5fc;
+  }
+  
+  .app .grid {
+    width: calc(100% - 80px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    min-height: calc(100vh - 120px);
+    height: auto;
+    padding: 40px 0;
+  }
+  
+  .app .grid .app-content {
+    grid-column: span 8;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .app .grid .app-content label {
+    color: var(--color-secondary);
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+  }
+  
+  .app .grid .app-result {
+    height: calc(100% - 40px);
+    grid-column: span 4;
+    background: #fff;
+    border-radius: 32px;
+    width: auto;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 42px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow-wrap: break-word;
+  }
+  
+  .app-encript {
+    height: 100%;
+  }
+  
+  .app-encript textarea {
+    max-width: 100%;
+    min-width: 100%;
+    border: none;
+    max-height: 80%;
+    min-height: 300px;
+    background: transparent;
+    resize: none;
+  }
+
+  .text-encript,.text-encript::placeholder  {
+    color: var(--color-primary);
+    font-family: "Inter", sans-serif ;
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .app-main-btns {
+    margin-top: 8px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  button {
+    position: relative;
+    width: 100%;
+    height: 67px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+  }
+
+  .btn-encript {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    border-color: var(--color-primary);
+}
+
+.btn-encript:hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+}
+
+.btn-desencript {
+    background-color: #D8DFE8;
+    color: var(--color-primary);
+    border-color: #D8DFE8;
+}
+
+.btn-desencript:hover {
+    background-color: #B0B7C3;
+    border-color: #B0B7C3;
+}
+  
+  .app .grid .app-result h3 {
+    margin-top: 16px;
+    color: #343A40;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+  }
+
+  .app .grid .app-result p {
+    margin-top: 16px;
+    color: var(--color-secondary);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .app .grid .app-result img {
+    width: 100%;
+    max-height: 304px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .container-hidden {
+    display: none;
+    width: 100%;
+  }
+
+  /*Colocando estilos a las alertas*/
+  .swal2-title {
+    color: #343A40; /* Tomate */
+    font-family: "Inter", sans-serif;
+}
+
+  .swal2-html-container {
+    font-family: 'Inter', sans-serif;
+}
+
+  .swal2-actions .swal2-confirm {
+    background-color: var(--color-primary); /* Azul real */
+    border: none;
+    font-family: "Inter", sans-serif;
+}
+ 
+  /*vista tablet */
+  @media (max-width: 768px){
+    .app .grid .app-content, .app .grid .app-result {
+      grid-column: span 12;
+    }
+  }
+  
+
+  /*Vista de celular*/
+  @media (max-width: 375px){
+    .app-main-btns {
+      flex-direction: column;
+    }
+  }
+
